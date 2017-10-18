@@ -1,0 +1,14 @@
+<?php
+include 'db_confice.php';
+
+
+$conn = mysqli_connect($servername,$username,$password,$dbname);
+if(!$conn){
+	die("connetion failed".mysqli_connect_error());
+	}
+//echo"connection success";
+
+$sql = "SELECT * FROM members";
+$result = $conn->query($sql);
+var_dump($result);
+?>
